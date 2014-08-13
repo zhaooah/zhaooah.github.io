@@ -44,6 +44,26 @@
   </h1>
   <br>
 
+
+  <a class="thumbnail" id="idream">
+    <img src="images/pitch1.png">
+    <span class="title">
+      iDream
+    </span>
+  </a>
+
+
+
+  <a class="thumbnail" id="schedule">
+    <img src="images/schedule.png">
+    <span class="title">
+      Scheduler
+    </span>
+  </a>
+
+
+
+
   <a class="thumbnail" id="rpowerpoint">
     <img src="images/rpowerpoint.png">
     <span class="title">
@@ -143,6 +163,28 @@
     </div>
 </div>
 
+
+
+<div class="schedule modal hiddenbox">
+  <i class="close icon"></i>
+  <div class="header">
+  Event Scheduler
+  </div>
+  <div class="content">
+    <div class="left">
+      - Created front-end and back-end of a event scheduler web application<br>
+      - Easy click, drag, select user interface<br>
+      - Separated calendars for each user<br>
+    </div>
+  </div>
+  <div class="modalImage">
+    <img src="images/schedule.png">
+  </div>
+    <div class="actions">
+    <div class="ui button">
+      Close
+    </div>
+</div>
 
 
 <div class="linux modal hiddenbox">
@@ -264,7 +306,17 @@ $('#linux').click(function(){
 });
 
 
+$('#schedule').click(function(){    
+  $('.schedule').modal('setting', 'transition', "horizontal flip");
+  $('.schedule').modal('show');  
+});
+
 </script>
+
+
+
+
+
 </body>
 
 </html>
