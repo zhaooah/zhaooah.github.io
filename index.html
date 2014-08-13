@@ -68,6 +68,16 @@
     </span>
   </a>
 
+
+  <a class="thumbnail" id="linux">
+    <img src="images/qemu.png">
+    <span class="title">
+      Linux Based Operating System
+    </span>
+  </a>
+
+
+
   <a class="thumbnail" id="lms">
     <img src="images/lms.jpg">
     <span class="title">
@@ -134,6 +144,54 @@
 </div>
 
 
+
+<div class="linux modal hiddenbox">
+  <i class="close icon"></i>
+  <div class="header">
+  Tiny Linux operating system
+  </div>
+  <div class="content">
+    <div class="left">
+      - Built Linux operating sysem from scratch  <br>
+      - Setting up system paging <br>
+      - Read-only file system<br>
+      - System calls for proecss execution<br>
+    </div>
+  </div>
+  <div class="modalImage">
+  <p>Picture: Most beautiful bug I have ever made</p>
+    <img src="images/qemu.png">
+  </div>
+    <div class="actions">
+    <div class="ui button">
+      Close
+    </div>
+</div>
+
+
+
+<div class="anychat modal hiddenbox">
+  <i class="close icon"></i>
+  <div class="header">
+  Anychat (Ongoing)
+  </div>
+  <div class="content">
+    <div class="left">
+      - Online multiple users chat system with NodeJS  <br>
+      - Chat history stored done in MongoDB <br>
+      - Support chat through phone text message (Twilio API)<br>
+    </div>
+  </div>
+  <div class="modalImage">
+    <img src="images/rpowerpoint.png">
+  </div>
+    <div class="actions">
+    <div class="ui button">
+      Close
+    </div>
+</div>
+
+
 <div class="rpowerpoint modal hiddenbox">
   <i class="close icon"></i>
   <div class="header">
@@ -141,7 +199,7 @@
   </div>
   <div class="content">
     <div class="left">
-      - Implemented Ruby library to generate OpenXML PowerPoint document (Currently None) <br>
+      - Implemented Ruby library to generate OpenXML PowerPoint document <br>
       - Generate Microsoft PowerPoint document from JSON like data source<br>
       - Currently working on building a web user interface<br>
     </div>
@@ -197,6 +255,12 @@ $('#lms').click(function(){
 $('#rpowerpoint').click(function(){    
   $('.rpowerpoint').modal('setting', 'transition', "horizontal flip");
   $('.rpowerpoint').modal('show');  
+});
+
+
+$('#linux').click(function(){    
+  $('.linux').modal('setting', 'transition', "horizontal flip");
+  $('.linux').modal('show');  
 });
 
 

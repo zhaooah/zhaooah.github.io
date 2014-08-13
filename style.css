@@ -590,7 +590,16 @@ body#invert .step a {color: black; background-color: #78FFB8;}
   margin-right: 5%;
   width:90%;
 }
- 
+
+.modalImage p{
+  font-style: italic;
+  text-align:center;
+  height:60%;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  width:90%;
+}
  
 .pulse {
   -webkit-animation-name: 'pulse_animation';
