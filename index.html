@@ -1,1 +1,278 @@
-Hello Hao!
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<script src="scripts/d3.v3.min.js" charset="utf-8"></script>
+  <script src="scripts/topojson.js"></script>
+  <script src="scripts/datamaps.all.js"></script>
+
+  <title>Hao</title>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Exo:400,700" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="semanticui/css/semantic.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+  <script src="semanticui/javascript/semantic.js"></script>
+  <script src="index.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+  
+<!-- index -->
+<a id="index"></a>
+  <div class="step" id="home" data-x="-1000" data-y="-1500">
+    <h1><a href="#what">what</a>,<a href="#where">where</a>,<a href="#when">when</a>,<a href="#who">who?</a><br><span style="font-size: 110px">Hao!</span></h1>
+    <p>weworks.co</p>
+    <aside><br>
+    Click one of navigate words for details.</aside>
+  </div>
+ 
+
+<!-- what -->
+<a id="what"></a>
+<br>
+<div class = "portfolio">
+  <h1>what i do?
+  <div class="nav-right">
+    <a href="#index"><i class="up arrow icon"></i></a>
+    <a href="#index"><i class="home icon"></i></a>
+    <a href="#where"><i class="down arrow icon"></i></a>
+  </div>
+  </h1>
+  <br>
+
+  <a class="thumbnail" id="rpowerpoint">
+    <img src="images/rpowerpoint.png">
+    <span class="title">
+      rPowerPoint
+    </span>
+  </a>
+
+
+
+  <a class="thumbnail" id="emailguess">
+    <img src="images/emailguess.png">
+    <span class="title">
+      EmailGuess
+    </span>
+  </a>
+
+
+  <a class="thumbnail" id="cpu">
+    <img src="images/cpu1.png">
+    <span class="title">
+      Pipelined CPU with Cache
+    </span>
+  </a>
+
+  <a class="thumbnail" id="lms">
+    <img src="images/lms.jpg">
+    <span class="title">
+      Adaptive LMS Filter
+    </span>
+  </a>
+
+
+</div>
+
+ 
+
+
+<!-->
+<a id="where">
+</a>
+<div class = "where">
+
+
+  <h1>where i have been?
+    <div class="nav-right">
+    <a href="#what"><i class="up arrow icon"></i></a>
+    <a href="#index"><i class="home icon"></i></a>
+    <a href="#when"><i class="down arrow icon"></i></a>
+  </div></h1>
+
+  <br>
+<div id="mapshow" style="position: relative; width: 96%; height: 80%; "></div>
+
+<script>
+var basic = new Datamap({
+  scope: 'usa',
+
+  element: document.getElementById("mapshow"),
+  fills: {
+    defaultFill: 'rgba(85,85,85,0.9)' },
+
+});
+</script>
+ 
+ 
+</div>
+
+<!-->
+
+
+
+<!--
+<a id="when">
+</a>
+<div class = "when">
+
+  <h1>when can you find me?
+    <div class="nav-right">
+    <a href="#where"><i class="up arrow icon"></i></a>
+    <a href="#index"><i class="home icon"></i></a>
+    <a href="#who"><i class="down arrow icon"></i></a>
+  </div></h1>
+  <br>
+
+
+
+</div>
+-->
+
+<!--
+
+
+<a id="who">
+</a>
+<div class = "who">
+
+  <h1>who is hao?
+    <div class="nav-right">
+    <a href="#when"><i class="up arrow icon"></i></a>
+    <a href="#index"><i class="home icon"></i></a>
+  </div></h1>
+  <br>
+
+</div>
+
+
+-->
+
+
+<div class="cpu modal hiddenbox">
+  <i class="close icon"></i>
+  <div class="header">
+  Pipelined CPU with L2 Cache
+  </div>
+  <div class="content">
+    <div class="right">
+      - Designed state machines of each unit,implemented in VHDL,and simulated in ModelSIM<br>
+      - Building from scratch (starting from basic ALU and logic gates)<br>
+      - Five stage pipelined CPU<br>
+      - Branch prediction<br>
+      - Branch target buffer<br>
+      - Forwarding and hazard detection unit<br>
+      - Split L1 instruction and data caches<br>
+      - Unified L2 cache arbiter and 8-way true LRU scheme<br>
+      - Victim cache and write eviction buffer<br>
+    </div>
+  </div>
+  <div class="modalImage">
+    <img src="images/cpu1.png">
+    <img src="images/cpu2.png">
+  </div>
+    <div class="actions">
+    <div class="ui button">
+      Close
+    </div>
+  </div>
+</div>
+ 
+
+<div class="lms modal hiddenbox">
+  <i class="close icon"></i>
+  <div class="header">
+  Adaptive LMS Filter
+  </div>
+  <div class="content">
+    <div class="left">
+      - Noise Cancellation with LMS algorithm<br>
+      - Block-based samples processing with circular buffer
+      - Implemented on a TI-55x DSP platform <br>
+      - Manually optimized from C code to TI DSP assembly code<br>
+    </div>
+  </div>
+  <div class="modalImage">
+    <img src="images/lms.jpg">
+  </div>
+    <div class="actions">
+    <div class="ui button">
+      Close
+    </div>
+</div>
+
+
+<div class="rpowerpoint modal hiddenbox">
+  <i class="close icon"></i>
+  <div class="header">
+  rPowerPoint
+  </div>
+  <div class="content">
+    <div class="left">
+      - Implemented Ruby library to generate OpenXML PowerPoint document (Currently None) <br>
+      - Generate Microsoft PowerPoint document from JSON like data source<br>
+      - Currently working on building a web user interface<br>
+    </div>
+  </div>
+  <div class="modalImage">
+    <img src="images/rpowerpoint.png">
+  </div>
+    <div class="actions">
+    <div class="ui button">
+      Close
+    </div>
+</div>
+
+
+<div class="emailguess modal hiddenbox">
+  <i class="close icon"></i>
+  <div class="header">
+  EmailGuess
+  <a href="http://emailguess.herokuapp.com"  target="_blank" class="clickme pulse"><i class="forward mail icon"></i></a>
+</div>
+  <div class="content">
+    <div class="left">
+      - User input name and company website address of a person, get his business email address <br>
+      - Click the pulse arrow above to visit website
+      - Ruby with Sinatra, customized Rack file <br>
+      - Resque with Redis for queuing system (Redis to Go on Herokuapp) <br>
+    </div>
+</div>
+    <div class="actions">
+    <div class="ui button">
+      Close
+    </div>
+</div>
+
+</div>
+
+<script>
+$('#emailguess').click(function(){    
+  $('.emailguess').modal('setting', 'transition', "horizontal flip");
+  $('.emailguess').modal('show');  
+});
+
+$('#cpu').click(function(){    
+  $('.cpu').modal('setting', 'transition', "horizontal flip");
+  $('.cpu').modal('show');  
+});
+
+$('#lms').click(function(){    
+  $('.lms').modal('setting', 'transition', "horizontal flip");
+  $('.lms').modal('show');  
+});
+
+$('#rpowerpoint').click(function(){    
+  $('.rpowerpoint').modal('setting', 'transition', "horizontal flip");
+  $('.rpowerpoint').modal('show');  
+});
+
+
+</script>
+</body>
+
+</html>
