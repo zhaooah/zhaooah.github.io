@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <script src="scripts/d3.v3.min.js" charset="utf-8"></script>
   <script src="scripts/topojson.js"></script>
   <script src="scripts/datamaps.all.js"></script>
@@ -9,25 +8,22 @@
   <title>Hao</title>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
   <link href="http://fonts.googleapis.com/css?family=Exo:400,700" rel="stylesheet" />
-
   <link rel="stylesheet" type="text/css" href="semanticui/css/semantic.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
   <script src="semanticui/javascript/semantic.js"></script>
   <script src="index.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
 </head>
 <body>
   
 <!-- index -->
 <a id="index"></a>
   <div class="step" id="home" data-x="-1000" data-y="-1500">
-    <h1><a href="#what">what</a>,<a href="#">where</a>,<a href="#">when</a>,<a href="#">who?</a><br><span style="font-size: 110px">Hao!</span></h1>
+    <h1><a href="#what">what</a>,<a href="#where">where</a>,<a href="#when">when</a>,<a href="#who">who?</a><br><span style="font-size: 110px">Hao!</span></h1>
     <p>weworks.co</p>
     <aside><br>
-    Click one of navigate words for details.</aside>
+    Click one of question words for details.</aside>
   </div>
  
 
@@ -44,16 +40,6 @@
   </h1>
   <br>
 
-
-  <a class="thumbnail" id="idream">
-    <img src="images/pitch1.png">
-    <span class="title">
-      iDream
-    </span>
-  </a>
-
-
-
   <a class="thumbnail" id="schedule">
     <img src="images/schedule.png">
     <span class="title">
@@ -61,17 +47,12 @@
     </span>
   </a>
 
-
-
-
   <a class="thumbnail" id="rpowerpoint">
     <img src="images/rpowerpoint.png">
     <span class="title">
       rPowerPoint
     </span>
   </a>
-
-
 
   <a class="thumbnail" id="emailguess">
     <img src="images/emailguess.png">
@@ -81,13 +62,19 @@
   </a>
 
 
+  <a class="thumbnail" id="idream">
+    <img src="images/pitch1.png">
+    <span class="title">
+      Pitch Matching
+    </span>
+  </a>
+
   <a class="thumbnail" id="cpu">
     <img src="images/cpu1.png">
     <span class="title">
       Pipelined CPU with Cache
     </span>
   </a>
-
 
   <a class="thumbnail" id="linux">
     <img src="images/qemu.png">
@@ -96,14 +83,167 @@
     </span>
   </a>
 
-
-
   <a class="thumbnail" id="lms">
     <img src="images/lms.jpg">
     <span class="title">
       Adaptive LMS Filter
     </span>
   </a>
+
+  <a class="thumbnail" id="dataminning">
+    <img src="images/fpgrowth.png">
+    <span class="title">
+    Association Rules Mining
+    </span>
+  </a>
+
+  <a class="thumbnail" id="fer">
+    <img src="images/fer.png">
+    <span class="title">
+      Facial Expression Recognition 
+    </span>
+  </a>
+
+  <a class="thumbnail" id="udp">
+    <img src="images/rdt.png">
+    <span class="title">
+      Reliable UDP File Transfer
+    </span>
+  </a>
+
+
+  <a class="thumbnail" id="goassembly">
+    <img src="images/goassembly.png">
+    <span class="title">
+      GoAssembly
+    </span>
+  </a>
+
+  <a class="thumbnail" id="anychat">
+    <img src="images/chatanytime.png">
+    <span class="title">
+    ChatAnytime
+    </span>
+  </a>
+</div>
+
+<!-- where -->
+<a id="where"></a>
+<br>
+<div class = "where">
+  <h1>where i live?
+  <div class="nav-right">
+    <a href="#what"><i class="up arrow icon"></i></a>
+    <a href="#index"><i class="home icon"></i></a>
+    <a href="#when"><i class="down arrow icon"></i></a>
+  </div>
+  </h1>
+  <br>
+
+
+  <div class="map" id="residence"></div>
+    <script data-info="Where I live">
+      var residence = new Datamap({
+      scope: 'usa',
+      element: document.getElementById('residence'),
+      geographyConfig: {
+      highlightBorderColor: '#bada55',
+      popupTemplate: function(geography, data) {
+        return '<div class="hoverinfo">'+data.desc+'</div>'
+      },
+      highlightBorderWidth: 1
+      },
+
+      fills: {
+      'Residence': '#3498db',
+      defaultFill: '#95a5a6'
+      },
+      data:{
+        "IL": {
+            "fillKey": "Residence",
+            "desc": "I spent 4 years at UIUC."
+        },
+        "NY": {
+            "fillKey": "Residence",
+            "desc": "Now I am at NYC!"
+        }
+      }
+    });
+    residence.labels();
+    </script>
+       
+
+</div>
+
+<!-- when -->
+<a id="when"></a>
+<br>
+<div class = "when">
+  <h1>when i am writing...
+  <div class="nav-right">
+    <a href="#where"><i class="up arrow icon"></i></a>
+    <a href="#index"><i class="home icon"></i></a>
+    <a href="#who"><i class="down arrow icon"></i></a>
+  </div>
+  </h1>
+  <br>
+
+  <h2>Education as international chain?</h2>
+  <p>NYU Shanghai, Georgia Tech Shenzhen, Duke Kunshan, CMU Nanjing & Guangzhou...<br> <br>
+  American universities are entering chinese education market! <br><br>
+  What will they bring? What will they change? What will be their impacts?<br><br>
+  I am going to write an article about it.<br><br>
+  </p><br><br>
+
+  <h2>Quirky Thursday Night</h2>
+  <p>Thanks to Nathaniel @ Quirky!<br> <br>
+  I am going to attend the Quirky Thursday Night this Thursday.<br><br>
+  Can't wait to evaluate ideas! <br><br>
+  I will post photo and article after meeting.<br><br>
+  </p><br><br>
+
+
+  <h2>Visit MongoDB HQ</h2>
+  <p>Thanks to Gary @ MongoDB!<br> <br>
+  I just had a trip to MongoDB HQ.<br><br>
+  Gary showed me several applications of MongoDB and how will MongoDB change web infracture. <br><br>
+  I will post photo and article soon.<br><br>
+  </p><br><br>
+
+</div>
+
+
+<!-- when -->
+<a id="who"></a>
+<br>
+<div class = "who">
+  <h1>who am i?
+  <div class="nav-right">
+    <a href="#when"><i class="up arrow icon"></i></a>
+    <a href="#index"><i class="home icon"></i></a>
+  </div>
+  </h1>
+  <br>
+
+ 
+I am Hao. I just graduated from University of Illinois at Urbana-Champaign with a bachelor degree in Computer Engineering. I will continue my graduate study at Cornell University this fall.<br><br>
+ 
+I am interested in "Internet of Things (IoT) ". In the era of IoT, devices will be connected to each other and produce large amount of data. Users can easily interact with devices through web interface in a more visual way. These are four specific fields I am interested in:<br><br>
+
+
+<b>Smart devices:</b> with a background in computer system, I have done many system level programming in C and assembly language. With knowledge in microcontrollers and digital circuit (VHDL) , I can help engineering prototype. Moreover, grew up in Shenzhen, China, world's hub for hardware startups, I can help to convert prototype to real product. With my engineering background and international experience, I hope I can help with two biggest chanlanges in hardware startups: <i>   1.Attain on-time delivery    2.ensure manufacturers really understand what you need.   </i> <br><br>
+
+<b>Data infrastructure:</b> the idea of data analysis is not new, many statisticians, mathematicians and business analysts have already done that. But why data analysis becomes so popular now? I believe it's because leapfrogging in data infrastructure. Distributed systems nowadays can power   <i>real-time  and   high volume of data </i>    With a powerful platform, data scientists and business analysts can easily perform data analysis anytime they want and get immediate feedbacks. With better visualization tools, everyone can make start data analysis without compliacted trainning.<br><br>
+
+
+<b>Web applications</b>: web is the gate of information flow. In Startup Institute, I am working projects in Rails, Sinatra and Flask with SQL. However, I believe web application in future will become more <i>  interactive   and   dynamic.  </i> So, I start learning NodeJS and MongoDB, which is the stack can help web application scale and go real-time in long term.<br><br>
+
+<b>Multimedia Applications:</b> Multimedia signal processing is my concentration in my undergraduate study. I studied multimedia signal processing in many different aspects, including but not limited to analogy signal processing, digital ignal processing, embedded ignal processing, machine learning in signal processing, and statistical signal processing. I did projects in both scalar signal processing (audio) and vector signal processing (images and video).
+<br><br>
+My email is haozheng4@acm.org . Please let me know if there is opportunity in any of these four fields.<br><br>
+
+
+
 
 
 </div>
@@ -200,14 +340,9 @@
       - System calls for proecss execution<br>
     </div>
   </div>
-  <div class="modalImage">
-  <p>Picture: Most beautiful bug I have ever made</p>
-    <img src="images/qemu.png">
-  </div>
-    <div class="actions">
-    <div class="ui button">
-      Close
-    </div>
+  <div class="modalImage"><p>Picture: Most beautiful bug I have ever made.I hated to see I fixed it. </p><img src="images/qemu.png"></div>
+ 
+  <div class="actions"><div class="ui button">Close</div></div>
 </div>
 
 
@@ -226,6 +361,29 @@
   </div>
   <div class="modalImage">
     <img src="images/rpowerpoint.png">
+  </div>
+    <div class="actions">
+    <div class="ui button">
+      Close
+    </div>
+</div>
+
+<div class="idream modal hiddenbox">
+  <i class="close icon"></i>
+  <div class="header">
+  Pitch Matching
+  </div>
+  <div class="content">
+    <div class="left">
+      - Voice switching program<br>
+      - Blind signal separation<br>
+      - Building pitch tables from singer's voice (ex. Adelaide)<br>
+      - Phase shift to match user's voice with singer's voice<br>
+    </div>
+  </div>
+  <div class="modalImage">
+    <img src="images/pitch1.png">
+    <img src="images/pitch2.png">
   </div>
     <div class="actions">
     <div class="ui button">
@@ -309,6 +467,12 @@ $('#linux').click(function(){
 $('#schedule').click(function(){    
   $('.schedule').modal('setting', 'transition', "horizontal flip");
   $('.schedule').modal('show');  
+});
+
+
+$('#idream').click(function(){    
+  $('.idream').modal('setting', 'transition', "horizontal flip");
+  $('.idream').modal('show');  
 });
 
 </script>
