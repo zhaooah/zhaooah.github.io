@@ -591,6 +591,15 @@ body#invert .step a {color: black; background-color: #78FFB8;}
   width:90%;
 }
 
+.modalImageA img{
+  text-align:center;
+  height:30%;
+  margin-top: 2%;
+  margin-left: 35%;
+  margin-right: 35%;
+  width:30%;
+}
+
 .modalImage p{
   font-style: italic;
   text-align:center;
